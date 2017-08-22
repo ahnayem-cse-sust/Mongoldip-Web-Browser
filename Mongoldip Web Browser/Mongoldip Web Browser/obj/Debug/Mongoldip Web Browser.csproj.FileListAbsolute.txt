@@ -1,1 +1,10 @@
 F:\400\Github\Mongoldip Web Browser\Mongoldip Web Browser\bin\Debug\Mongoldip Web Browser.exe.config
+F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\bin\Debug\Mongoldip Web Browser.exe.config
+F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\bin\Debug\Mongoldip Web Browser.exe
+F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\bin\Debug\Mongoldip Web Browser.pdb
+F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\obj\Debug\Mongoldip Web Browser.csprojResolveAssemblyReference.cache
+F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\obj\Debug\Mongoldip_Web_Browser.Properties.Resources.resources
+F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\obj\Debug\Mongoldip Web Browser.csproj.GenerateResource.Cache
+F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\obj\Debug\Mongoldip Web Browser.exe
+F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\obj\Debug\Mongoldip Web Browser.pdb
+F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\obj\Debug\Mongoldip_Web_Browser.Form1.resources
