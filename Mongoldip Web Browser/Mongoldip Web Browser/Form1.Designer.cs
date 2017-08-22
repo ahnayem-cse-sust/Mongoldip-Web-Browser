@@ -64,13 +64,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(691, 446);
             this.Controls.Add(this.urlBox);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.urlButton);
+            this.KeyPreview = true;
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.go_url);
+            this.Text = "Mongoldip Web Browser";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.formKeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

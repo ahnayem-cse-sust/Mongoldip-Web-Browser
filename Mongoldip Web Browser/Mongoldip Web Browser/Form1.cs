@@ -32,9 +32,10 @@ namespace Mongoldip_Web_Browser
             webBrowser1.Navigate(urlBox.Text);
             String demoText = urlBox.Text + " is loading.";
             say(demoText);
-            
-            say("You should Filish");
+
+            full_html_text = null;
             full_html_text = webBrowser1.DocumentText;
+            
             
         }
 
@@ -43,15 +44,23 @@ namespace Mongoldip_Web_Browser
            
         }
 
-        SpeechSynthesizer sSynth = new SpeechSynthesizer();
-        PromptBuilder pBuilder = new PromptBuilder();
-        SpeechRecognitionEngine sRecognize = new SpeechRecognitionEngine();
+        SpeechSynthesizer sSynth;
+        // PromptBuilder pBuilder = new PromptBuilder();
+        // SpeechRecognitionEngine sRecognize = new SpeechRecognitionEngine();
 
         public void say(String toSay)
         {
-            pBuilder.ClearContent();
-            pBuilder.AppendText(toSay);
-            sSynth.Speak(pBuilder);
+           // pBuilder.ClearContent();
+           // pBuilder.AppendText(toSay);
+            sSynth = new SpeechSynthesizer();
+            try
+            {
+                sSynth.SpeakAsync(toSay);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Exception Occured");
+            }
         }
 
         private void load(object sender, KeyEventArgs e)
@@ -59,6 +68,14 @@ namespace Mongoldip_Web_Browser
             if (e.KeyCode == Keys.Enter)
             {
                 urlButton_Click(this, e);
+            }
+        }
+
+        private void formKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            { 
+                sSynth.Dispose();
             }
         }
 
