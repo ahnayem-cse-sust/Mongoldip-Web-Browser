@@ -35,11 +35,11 @@
             // 
             // urlButton
             // 
-            this.urlButton.Location = new System.Drawing.Point(327, 12);
+            this.urlButton.Location = new System.Drawing.Point(327, 14);
             this.urlButton.Name = "urlButton";
-            this.urlButton.Size = new System.Drawing.Size(75, 23);
+            this.urlButton.Size = new System.Drawing.Size(63, 21);
             this.urlButton.TabIndex = 0;
-            this.urlButton.Text = "Enter";
+            this.urlButton.Text = "Go";
             this.urlButton.UseVisualStyleBackColor = true;
             this.urlButton.Click += new System.EventHandler(this.urlButton_Click);
             this.urlButton.Enter += new System.EventHandler(this.button1_Enter);
@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(691, 446);
             this.Controls.Add(this.urlBox);
             this.Controls.Add(this.webBrowser1);

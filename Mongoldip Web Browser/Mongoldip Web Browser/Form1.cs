@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Speech.Synthesis;
 using System.Speech.Recognition;
 using System.Threading;
+using System.IO;
 
 namespace Mongoldip_Web_Browser
 {
@@ -32,9 +33,28 @@ namespace Mongoldip_Web_Browser
             webBrowser1.Navigate(urlBox.Text);
             String demoText = urlBox.Text + " is loading.";
             say(demoText);
+            HtmlDocument htmlDoc = webBrowser1.Document;
+            HtmlElementCollection col = null;
+            try
+            {
+               col  = htmlDoc.GetElementsByTagName("a");
+            }
+            catch
+            {
+                MessageBox.Show("Link searching Error");
+            }
 
-            full_html_text = null;
-            full_html_text = webBrowser1.DocumentText;
+            foreach (HtmlElement element in col)
+            {
+                string link;
+
+                link = element.GetAttribute("href");
+                Console.Write(link);
+                if (link == null || link.Length == 0)
+                {
+                    Console.Write("No link");
+                }
+            }
             
             
         }
@@ -74,8 +94,16 @@ namespace Mongoldip_Web_Browser
         private void formKeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
-            { 
-                sSynth.Dispose();
+            {
+                MessageBox.Show("This is Esc");
+                try
+                {
+                    sSynth.Dispose();
+                }
+                catch(Exception ex)
+                {
+                    
+                }
             }
         }
 

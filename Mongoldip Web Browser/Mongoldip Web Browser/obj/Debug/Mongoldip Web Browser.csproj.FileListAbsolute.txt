@@ -8,3 +8,4 @@ F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\
 F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\obj\Debug\Mongoldip Web Browser.exe
 F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\obj\Debug\Mongoldip Web Browser.pdb
 F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\obj\Debug\Mongoldip_Web_Browser.Form1.resources
+F:\400\Github\Mongoldip-Web-Browser\Mongoldip Web Browser\Mongoldip Web Browser\obj\Debug\Mongoldip Web Browser.csproj.CoreCompileInputs.cache

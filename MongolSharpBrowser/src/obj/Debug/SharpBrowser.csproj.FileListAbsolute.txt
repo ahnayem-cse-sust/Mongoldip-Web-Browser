@@ -1,0 +1,10 @@
+F:\400\MongolSharpBrowser\src\bin\SharpBrowser.exe.config
+F:\400\MongolSharpBrowser\src\bin\SharpBrowser.exe
+F:\400\MongolSharpBrowser\src\bin\SharpBrowser.pdb
+F:\400\MongolSharpBrowser\src\obj\Debug\SharpBrowser.csprojResolveAssemblyReference.cache
+F:\400\MongolSharpBrowser\src\obj\Debug\SharpBrowser.MainForm.resources
+F:\400\MongolSharpBrowser\src\obj\Debug\SharpBrowser.Properties.Resources.resources
+F:\400\MongolSharpBrowser\src\obj\Debug\SharpBrowser.csproj.GenerateResource.Cache
+F:\400\MongolSharpBrowser\src\obj\Debug\SharpBrowser.csproj.CoreCompileInputs.cache
+F:\400\MongolSharpBrowser\src\obj\Debug\SharpBrowser.exe
+F:\400\MongolSharpBrowser\src\obj\Debug\SharpBrowser.pdb
