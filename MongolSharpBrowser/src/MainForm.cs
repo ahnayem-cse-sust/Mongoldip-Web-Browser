@@ -14,6 +14,7 @@ using Timer = System.Windows.Forms.Timer;
 using System.Drawing;
 using System.Reflection;
 using System.Speech.Synthesis;
+using mshtml;
 
 namespace SharpBrowser {
 
@@ -70,13 +71,9 @@ namespace SharpBrowser {
 		}
 
         SpeechSynthesizer sSynth;
-        // PromptBuilder pBuilder = new PromptBuilder();
-        // SpeechRecognitionEngine sRecognize = new SpeechRecognitionEngine();
 
         public void Speak(String toSay)
         {
-            // pBuilder.ClearContent();
-            // pBuilder.AppendText(toSay);
             sSynth = new SpeechSynthesizer();
             try
             {
@@ -138,9 +135,10 @@ namespace SharpBrowser {
 			KeyboardHandler.AddHotKey(this, OpenDeveloperTools, Keys.F12);
 			KeyboardHandler.AddHotKey(this, NextTab, Keys.Tab, true);
 			KeyboardHandler.AddHotKey(this, PrevTab, Keys.Tab, true, true);
+            KeyboardHandler.AddHotKey(this, ReadSelectedText, Keys.S,true);
 
-			// search hotkeys
-			KeyboardHandler.AddHotKey(this, OpenSearch, Keys.F, true);
+            // search hotkeys
+            KeyboardHandler.AddHotKey(this, OpenSearch, Keys.F, true);
 			KeyboardHandler.AddHotKey(this, CloseSearch, Keys.Escape);
 			KeyboardHandler.AddHotKey(this, StopActiveTab, Keys.Escape);
 
@@ -523,6 +521,9 @@ namespace SharpBrowser {
 		public ChromiumWebBrowser CurBrowser {
 			get {
 				if (TabPages.SelectedItem != null && TabPages.SelectedItem.Tag != null) {
+                    string s = ""+TabPages.SelectedItem;
+                    stopSpeak();
+                    Speak(s);
 					return ((SharpTab)TabPages.SelectedItem.Tag).Browser;
 				} else {
 					return null;
@@ -788,9 +789,10 @@ namespace SharpBrowser {
 		}
 
 		private void tabPages_MouseClick(object sender, MouseEventArgs e) {
-			/*if (e.Button == System.Windows.Forms.MouseButtons.Right) {
+            /*if (e.Button == System.Windows.Forms.MouseButtons.Right) {
 				tabPages.GetTabItemByPoint(this.mouse
 			}*/
+            //MessageBox.Show("Yes");
 		}
 
 		#endregion
@@ -896,11 +898,30 @@ namespace SharpBrowser {
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Search Bar
+        #region SpeakSelectedtext
+        
 
-		bool searchOpen = false;
+        private void ReadSelectedText()
+        {
+            string address = CurBrowser.Address;
+            //webBrowser1.Navigate(address);
+            //string html_full = webBrowser1.DocumentText;
+            //MessageBox.Show(html_full);
+            stopSpeak();
+            TextForm tf = new TextForm(address);
+            tf.ShowDialog();
+            
+            //MessageBox.Show(address);
+            
+        }
+        
+        #endregion
+
+        #region Search Bar
+
+        bool searchOpen = false;
 		string lastSearch = "";
 
 		private void OpenSearch() {

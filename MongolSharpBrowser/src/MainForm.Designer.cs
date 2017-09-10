@@ -50,6 +50,7 @@
             this.BtnPrevSearch = new System.Windows.Forms.Button();
             this.BtnCloseSearch = new System.Windows.Forms.Button();
             this.TxtSearch = new System.Windows.Forms.TextBox();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStripTab.SuspendLayout();
             this.PanelToolbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabPages)).BeginInit();
@@ -303,8 +304,18 @@
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(181, 25);
             this.TxtSearch.TabIndex = 6;
-            this.TxtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
+            this.TxtSearch.TextChanged += new System.EventHandler(this.BtnNextSearch_Click);
             this.TxtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyDown);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(1, 29);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(932, 591);
+            this.webBrowser1.TabIndex = 2;
+            this.webBrowser1.Visible = false;
             // 
             // MainForm
             // 
@@ -358,6 +369,7 @@
 		private System.Windows.Forms.Button BtnCloseSearch;
 		private System.Windows.Forms.Button BtnPrevSearch;
 		private System.Windows.Forms.Button BtnNextSearch;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 
